@@ -1,0 +1,22 @@
+<% include partials/header %>
+<br>
+<div class="card w-80 mx-auto text-center">
+    <div class="">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="p-25px b-black">
+                    <img class="height-500" src="/uploads/<%=image.fileName%>" alt="<%=image.name%>">
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-4">
+                <div class="p-25px">
+                    <h3 class="text-left"><%=image.name%></h3>
+                    <p class="text-left"><%=image.description%></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<% include partials/footer %>

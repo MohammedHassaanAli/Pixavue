@@ -1,0 +1,20 @@
+<% include partials/header %>
+
+<div class="upload">
+    <div class="mx-auto w-25">
+        <br>
+        <div class="card shadow">
+            <div class="p-25px">
+                <h2 class="text-uppercase text-center">Upload an image.</h2><br>
+                <form class="text-center" action="/upload" method="POST" enctype="multipart/form-data">
+                    <input class="form-control" required type="text" name="name" id="" placeholder="Give a name"><br>
+                    <textarea class="form-control" required type="text" name="description" id="" placeholder="Add Description"></textarea><br>
+                    <input class="w-75" type="file" required name="myImage" placeholder="Upload Image"><br><br>
+                    <button class="btn btn-orange">Upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>

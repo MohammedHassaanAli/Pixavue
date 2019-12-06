@@ -1,0 +1,23 @@
+<% include partials/header %>
+<div class="container">
+    <%if(images.length === 0){%>
+    <div>
+        <h2 class="text-center">No Image Found!</h2><br>
+        <a href="/upload" class="text-center nav-link">Upload Images</a>
+    </div>
+    <%}%>
+    <div class="grid-container">
+    <%if(images.length === 0){%>
+    <%}else{%>
+    <%images.forEach(image => {%>
+    <div class="image-div">
+        <a href="/getdetails/<%=image._id%>">
+            <img class="img-thumbnail img" src="/uploads/<%=image.fileName%>" alt="image">
+        </a>
+    </div>
+    <%})%>
+    <%}%>
+    </div>
+</div>
+
+<% include partials/footer %>

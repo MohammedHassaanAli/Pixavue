@@ -1,0 +1,34 @@
+<%- include partials/header %>
+<br>
+<div class="card w-25 mx-auto shadow">
+    <div class="p-25px">
+        <h1 class="text-center text-uppercase">Register</h1>
+        <form class="w-100" action="/register" method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="name"
+                    placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                    <label for="exampleInputPassword1">Confirm Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password2" placeholder="Confirm Password">
+                </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary text-uppercase">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include partials/footer %>

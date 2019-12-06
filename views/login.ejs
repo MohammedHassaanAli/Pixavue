@@ -1,0 +1,24 @@
+<%- include partials/header %>
+<br>
+<div class="card w-25 mx-auto shadow">
+    <div class="p-25px">
+        <h1 class="text-center text-uppercase">Login</h1>
+        <form class="w-100" action="/login" method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include partials/footer %>
