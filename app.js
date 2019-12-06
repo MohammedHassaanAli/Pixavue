@@ -10,7 +10,7 @@ const multer = require("multer");
 const path = require("path");
 const User = require("./models/User");
 const Images = require("./models/Images");
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 
 let transporter = nodemailer.createTransport({
