@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "debug": "node --nolazy --inspect-brk=9229 myProgram.js"
   },
   "keywords": [],
