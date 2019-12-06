@@ -27,7 +27,7 @@ let transporter = nodemailer.createTransport({
 });
 
 
-mongoose.connect("mongodb://localhost:27017/imagesapp", (err) => {
+mongoose.connect("mongodb://uncffx5it1tsuaykodob:AbCHlJOL3MKBp28kaKf5@bq3zudcybl75e5s-mongodb.services.clever-cloud.com:27017/bq3zudcybl75e5s", (err) => {
     if (err) {
         console.log(err)
     } else {
@@ -180,9 +180,9 @@ app.post("/register", (req, res) => {
 })
 
 app.get("/home", isLoggdIn, (req, res) => {
-    Images.find({userId: req.user._id})
-        .then((images)=>{
-            res.render("home", {images})
+    Images.find({ userId: req.user._id })
+        .then((images) => {
+            res.render("home", { images })
         })
         .catch((err) => {
             console.log(err)
@@ -211,21 +211,21 @@ app.post("/upload", isLoggdIn, (req, res) => {
                 }).then(() => {
                     res.redirect("/home")
                 })
-                .catch(err => {
-                    console.log(err)
-                    res.redirect("/upload")
-                })
+                    .catch(err => {
+                        console.log(err)
+                        res.redirect("/upload")
+                    })
             }
         }
     });
 })
 
-app.get("/getdetails/:id", (req, res)=>{
+app.get("/getdetails/:id", (req, res) => {
     Images.findById(req.params.id)
-        .then((image)=>{
-            res.render("imagedetails", {image});
+        .then((image) => {
+            res.render("imagedetails", { image });
         })
-        .catch(err=>{
+        .catch(err => {
             console.log(err);
             res.redirect("/home");
         })
